@@ -7,10 +7,10 @@ const bs = require('browser-sync').create();
 //import variables
 import { dirs } from './util/paths';
 
-export const buildimages = () => {
+export const buildscripts = () => {
 
-  return src(dirs.src + "/images/**/*.*")
-      .pipe(dest(dirs.dest + '/images/'))
+  return src(dirs.src + "/scripts/**/*.*")
+      .pipe(dest(dirs.dest + '/scripts/'))
       .on('error', notify.onError("Error: <%= error.message %>"))
       .pipe(bs.stream());
 };

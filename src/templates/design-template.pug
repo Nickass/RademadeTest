@@ -42,10 +42,10 @@ html
             .profile__footer
               .profile__block
                 .profile__key Phone
-                .profile__value (+31) 140 175 468
+                a(href="tel:+31140175468").profile__value (+31) 140 175 468
               .profile__block
                 .profile__key Address
-                .profile__value Binnenweg 50, Rotterdam
+                address.profile__value Binnenweg 50, Rotterdam
               .profile__block
                 button.btn.to-right Create quote
         .profile__tabs
@@ -78,3 +78,6 @@ html
               a(href="#calendar").main-menu__link
                 +icon('calendar').main-menu__icon
                 | Calendar
+    script(src="scripts/ofi.min.js")
+    script(src="scripts/svg4everybody.min.js")
+    script svg4everybody();

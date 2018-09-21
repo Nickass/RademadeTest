@@ -10,6 +10,7 @@ import { buildSass } from './gulp_tasks/sass';
 import { buildPug } from './gulp_tasks/pug';
 import { buildIcons } from './gulp_tasks/icons';
 import { buildimages } from './gulp_tasks/images';
+import { buildscripts } from './gulp_tasks/scripts';
 import { connectServer, browserSync } from './gulp_tasks/connect';
 
 
@@ -20,8 +21,9 @@ export const devWatch = () => {
   watch(sources.styles, series(buildSass)).on('end', bs.reload);
   watch(sources.templates, series(buildPug)).on('end', bs.reload);
   watch(sources.images, series(buildimages)).on('end', bs.reload);
+  watch(sources.scripts, series(buildscripts)).on('end', bs.reload);
 };
 
 // tasks build
-export const build = series(buildimages, buildIcons, buildSass, buildPug , parallel(devWatch,connectServer,browserSync));
+export const build = series(buildscripts, buildimages, buildIcons, buildSass, buildPug , parallel(devWatch,connectServer,browserSync));
 export default build;

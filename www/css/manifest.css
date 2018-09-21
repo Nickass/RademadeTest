@@ -473,7 +473,9 @@ textarea {
     color: #442a9d;
     font-size: 15px;
     font-weight: 700;
-    line-height: 1; }
+    line-height: 1;
+    text-decoration: none;
+    font-style: normal; }
 
 .tabs__nav {
   list-style: none;
