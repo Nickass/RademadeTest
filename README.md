@@ -1,7 +1,5 @@
 # Made by Nazarishin Nikolay for Rademade for testing
 
-# Rademade Test Skeleton
-
 ##### 1. Install node.js and npm
 [https://www.npmjs.com/get-npm](https://www.npmjs.com/get-npm)
 
