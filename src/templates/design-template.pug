@@ -1,0 +1,80 @@
+include mixins/text
+
+html
+  head
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    link(rel="stylesheet" type="text/css" href="./css/manifest.css")
+
+  body.page
+    .page__main
+      header.header
+        .header__breadcrumbs
+          ul.breadcrumbs
+            li.breadcrumbs__item
+              a(href="#customers").breadcrumbs__link Customers
+              +icon('chevron-right').breadcrumbs__del
+            li.breadcrumbs__item
+              a(href="#customers").breadcrumbs__link Max Jones
+        .header__user
+          a(href="#").user
+            .user__photo
+              img(src="images/user.png").user__img
+            .user__name Hello Lauren
+        .header__msg
+          a(href="#").msg
+            +icon('bell').msg__icon
+            span.msg__num 4
+        .header__search
+          form.search
+            input(type="search", placeholder="search").search__field
+            button(type="submit").search__btn
+              +icon('search').search__icon
+      main.profile
+        .profile__main
+          .profile__photo
+            .avatar
+              img(src="images/profile.png").avatar__img
+          .profile__info
+            .profile__header
+              h1.profile__title Max Jones
+                span.profile__badge gold
+              .profile__subtitle Sales & marketing
+            .profile__footer
+              .profile__block
+                .profile__key Phone
+                .profile__value (+31) 140 175 468
+              .profile__block
+                .profile__key Address
+                .profile__value Binnenweg 50, Rotterdam
+              .profile__block
+                button.btn.to-right Create quote
+        .profile__tabs
+          .tabs
+            ul.tabs__nav
+              li.tabs__item
+                a(href="#overview").tabs__link.active Overview
+              li.tabs__item
+                a(href="#orders").tabs__link Orders
+              li.tabs__item
+                a(href="#payments").tabs__link Payments
+    .page__sidebar
+      aside.sidebar
+        h2.sidebar__title CRM
+        nav.sidebar__menu
+          ul.main-menu
+            li.main-menu__item
+              a(href="#dashboard").main-menu__link
+                +icon('dashboard').main-menu__icon
+                | Dashboard
+            li.main-menu__item
+              a(href="#reports").main-menu__link.active
+                +icon('pie-chart').main-menu__icon
+                | Reports
+            li.main-menu__item
+              a(href="#customers").main-menu__link
+                +icon('briefcase').main-menu__icon
+                | Customers
+            li.main-menu__item
+              a(href="#calendar").main-menu__link
+                +icon('calendar').main-menu__icon
+                | Calendar
